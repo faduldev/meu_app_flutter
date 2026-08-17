@@ -1,0 +1,25 @@
+{
+  "name": "Flutter Development",
+
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+
+  "remoteUser": "vscode",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Dart-Code.flutter",
+        "Dart-Code.dart-code"
+      ]
+    }
+  },
+
+  "forwardPorts": [
+    8080
+  ],
+
+  "postCreateCommand": "flutter doctor && flutter config --enable-web"
+}
